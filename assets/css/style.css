@@ -1,0 +1,26 @@
+body {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#top {
+	background-color: #80bfff;
+	color: #0000ff;
+	text-align: center;
+}
+
+.section {
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	color: #5656565;
+}
+
+form {
+	padding: 5px;
+}
+.table {
+	border: 2px solid;
+	padding: 5px;
+	color: #8565ff;
+}
