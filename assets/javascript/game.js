@@ -6,7 +6,7 @@ function thisMoment() {
 
 
 
-  // Initialize Firebase
+  
   var config = {
     apiKey: "AIzaSyCP_gmaPg_BH_1ZgWIPairUV_4x_puCs5M",
     authDomain: "trainscheduler-3916e.firebaseapp.com",
@@ -20,7 +20,7 @@ function thisMoment() {
 
   var dataRef = firebase.database();
 
-    // Initial Values
+    
     var name = "";
     var destination = "";
     var trainTime = "";
@@ -28,11 +28,11 @@ function thisMoment() {
     var nextTrainArrival = "";
     var minutesAway = "";
 
-    // Capture Button Click
+    
     $("#click-button").on("click", function(event) {
       event.preventDefault();
 
-      // Grabbed values from text boxes
+      
       name = $("#name-input").val().trim();
       destination = $("#destination-input").val().trim();
       trainTime = $("#time-input").val().trim();
@@ -47,7 +47,7 @@ function thisMoment() {
 
       
 
-      // Code for handling the push
+      
       database.ref().push({
         name: name,
         destination: destination,
@@ -60,31 +60,30 @@ function thisMoment() {
 
     });
 
-    //====================================================
-
+    
     function myFunction(tt, fr){
     
       var firstTimeConverted = moment(tt, "hh:mm").subtract(1, "years");
       console.log(firstTimeConverted);
 
-      // Current Time
+      
       var currentTime = moment();
       console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
-      // Difference between the times
+      
       var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
       console.log("DIFFERENCE IN TIME: " + diffTime);
 
-      // Time apart (remainder)
+      
       var tRemainder = diffTime % fr;
       console.log(tRemainder);
 
-      // Minute Until Train
+      
       var tMinutesTillTrain = fr - tRemainder;
       console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
       minutesAway = tMinutesTillTrain;
 
-      // Next Train
+      
       var nextTrain = moment().add(tMinutesTillTrain, "minutes");
       console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
@@ -93,7 +92,7 @@ function thisMoment() {
     }
     myFunction();
 
-    //====================================================
+    
 
 
 
@@ -105,7 +104,7 @@ function thisMoment() {
         " </span><td span id='next'> " + childSnapshot.val().nextTrainArrival + "</td>" +
         " </span><td span id='minAway'> " + childSnapshot.val().minutesAway + "</td>" + " </span></div>");
 
-      // Handle the errors
+      
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
     });

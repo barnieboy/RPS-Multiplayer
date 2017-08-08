@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Train Scheduler</title>
+  <title>Train Scheduler</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -18,10 +18,10 @@
 
 <div class="section">
 <div class="panel panel-default panel-primary">
-  <!-- Default panel contents -->
+  
   <div class="panel-heading">Current Train Schedule</div>
 
-  <!-- Table -->
+  
   <table class="table">
     <thead>
       <tr>
@@ -39,25 +39,24 @@
 </div>
 
 <div class="panel panel-default panel-primary">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Add Train</div> <!--formerly Current Employees -->
-<form>
+  
+  <div class="panel-heading">Add Train</div> 
   <div class="form-group">
-    <label for="train">Train Name</label> <!-- formerly Name -->
+    <label for="train">Train Name</label> 
     <input type="text" class="form-control" id="name-input">
   </div>
     <div class="form-group">
-    <label for="destination">Destination</label> <!-- formerly Name -->
+    <label for="destination">Destination</label> 
     <input type="text" class="form-control" id="destination-input">
   </div>
     <div class="form-group">
       <div class="input-group date timepicker">
-    <label for="inputTrainTime">First Train Time (HH:mm - military time)</label> <!-- formerly Role -->
+    <label for="inputTrainTime">First Train Time (HH:mm - military time)</label> 
     <input data-date-format="HH:mm" class="form-control" id="time-input">
   </div>
   </div>
     <div class="form-group">
-    <label for="inputFrequency">Frequency (min)</label> <!-- Start Date DD/MM/YY -->
+    <label for="inputFrequency">Frequency (min)</label> 
     <input type="number" class="form-control" id="freq-input">
   </div>
   <button type="submit" id="click-button" class="btn btn-default btn-primary">Submit</button>
